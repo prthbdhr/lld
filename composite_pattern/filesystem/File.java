@@ -2,40 +2,43 @@ package composite_pattern.filesystem;
 
 public class File implements IFileSystem{
 
+    private String name;
+    private int size;
+
+    public File(String name, int size) {
+        this.name = name;
+        this.size = size;
+    }
     @Override
     public void ls(int indent) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'ls'");
+        String indentSpace = " ".repeat(indent);
+        System.out.println(indentSpace + name);
     }
 
     @Override
-    public void openAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'openAll'");
+    public void openAll(int indent) {
+        String indentSpaces = " ".repeat(indent);
+        System.out.println(indentSpaces + name);
     }
 
     @Override
     public int getSize() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getSize'");
+        return size;
     }
 
     @Override
     public IFileSystem cd(String name) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'cd'");
+        return null;
     }
 
     @Override
     public String getName() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getName'");
+        return name;
     }
 
     @Override
     public boolean isFolder() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isFolder'");
+        return false;
     }
     
 }

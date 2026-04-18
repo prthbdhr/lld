@@ -2,7 +2,7 @@ package composite_pattern.filesystem;
 
 public interface IFileSystem {
     void ls(int indent);
-    void openAll();
+    void openAll(int indent);
     int getSize();
     IFileSystem cd (String name);
     String getName();
